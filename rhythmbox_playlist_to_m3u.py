@@ -64,11 +64,11 @@ def main():
 						default=def_pl,
 						help='Rhythmbox playlist file, in XML format')
 	parser.add_argument('-r', '--relative', action='store_true',
-						help='Calculate relative path to songs insid m3u files')
+						help='Make path to song relative to m3u file holding it. (absolute by default)')
 	args = parser.parse_args()
 
 	infile = args.i
-	outdir = args.o # '/docs/music/__playlists'
+	outdir = args.o
 	is_relative = args.relative
 	tmpdir = '/tmp'
 
